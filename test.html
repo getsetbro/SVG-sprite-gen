@@ -8,12 +8,12 @@
   body{font-family: Arial, Helvetica, sans-serif}
   .svg{height:50px}
   .div1{
-      background-image: url(#input3);
+      background-image: url('#input3');
       height:150px;
       width:150px
   }
   .div2{
-      background-image: url(svgsprite.svg#input3);
+      background-image: url('./svgsprite.svg#input3');
       height:150px;
       width:150px
   }
@@ -28,13 +28,13 @@
 
     <svg class="svg"><use xlink:href="#input1"/></svg>
     <br>
-    <svg class="svg"><use xlink:href="#input3"/></svg>
+    <svg class="svg"><use xlink:href="./svgsprite.svg#input3"/></svg>
     <br>
     <div class="div1"></div>
     <br>
     <div class="div2"></div>
     <br>
-    <img src="svgsprite.svg#input3" alt="alt"/>
+    <img src="./svgsprite.svg#input3" alt="alt"/>
 
 <span style="visibility: hidden; position: absolute; z-index: -1;">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
