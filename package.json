@@ -1,0 +1,23 @@
+{
+  "name": "svg-sprite-gen",
+  "version": "1.0.0",
+  "description": "SVG sprites with NPM scripts",
+  "main": "index.js",
+  "scripts": {
+    "rimraf": "rimraf dist",
+    "prebuildsprite": "node imagemin-svgo.js",
+    "buildsprite": "svgstore -o svgsprite.svg dist/**/*.svg --inline",
+    "embedsprite": "node embed-sprite.js",
+    "start": "npm run rimraf && npm run buildsprite && npm run embedsprite"
+  },
+  "author": "gsb",
+  "license": "ISC",
+  "devDependencies": {
+    "ejs": "~2.5.7",
+    "glob": "~7.1.2",
+    "imagemin": "~5.3.1",
+    "imagemin-svgo": "~5.2.2",
+    "rimraf": "~2.6.1",
+    "svgstore-cli": "~1.3.0"
+  }
+}
