@@ -6,7 +6,7 @@
   "scripts": {
     "rimraf": "rimraf dist",
     "prebuildsprite": "node imagemin-svgo.js",
-    "buildsprite": "svgstore -o svgsprite.svg dist/**/*.svg --inline",
+    "buildsprite": "svgstore -o svgsprite.svg dist/*.svg",
     "embedsprite": "node embed-sprite.js",
     "start": "npm run rimraf && npm run buildsprite && npm run embedsprite"
   },
